@@ -1,0 +1,34 @@
+export GIT_SSL_NO_VERIFY=true
+
+#ls
+alias ll="ls -l"
+#tmux
+alias tm="tmux"
+alias tma="tmux attach"
+#git
+alias g="git"
+alias gap="git add -p"
+alias gps="git push"
+alias gpa="git pull --all"
+alias gs="git status -s"
+alias gsn="git status -s --untracked=no"
+alias gsss="echo \`gs -s|grep M|wc -l\`M,\`gs -s|grep D|wc -l\`D,\`gs -s|grep ??|wc -l\`?"
+alias gd="git diff"
+alias gdc="git diff --cached"
+alias gss="git stash show"
+alias gsp="git stash pop"
+alias gst="git stash"
+alias gsl="git stash list"
+alias gsd="git stash drop"
+alias grc="git rebase --continue"
+alias gr="git rebase"
+
+alias refreshbash="curl http://ryansb.com/brc > ~/.bashrc && source ~/.bashrc"
+alias gitconfig="curl -k https://raw.github.com/ryansb/dotfiles/master/gitconfig > ~/.gitconfig"
+alias tmuxconfig="curl http://ryansb.com/tmux > ~/.tmux.conf"
+alias vimconfig="curl http://ryansb.com/vimrc > ~/.vimrc"
+alias goepel="wget http://dl.fedoraproject.org/pub/epel/5/i386/epel-release-5-4.noarch.rpm && yum localinstall epel-release-5-4.noarch.rpm --nogpgcheck -y"
+alias allconfig="curl -k https://raw.github.com/ryansb/dotfiles/master/gitconfig > ~/.gitconfig && curl http://ryansb.com/tmux > ~/.tmux.conf && curl http://ryansb.com/vimrc > ~/.vimrc"
+alias bootstrap="yum install vim-enhanced git tmux"
+
+PS1="\\u@\\H \\w $ "
